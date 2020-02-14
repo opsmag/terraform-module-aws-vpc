@@ -64,7 +64,7 @@ variable "data_subnets" {
 }
 
 variable "intra_subnets" {
-  type        = "list"
+  type        = list
   description = "A list of intra subnets"
   default     = []
 }
@@ -131,7 +131,7 @@ variable "reuse_nat_ips" {
 
 variable "external_nat_ip_ids" {
   description = "List of EIP IDs to be assigned to the NAT Gateways (used in combination with reuse_nat_ips)"
-  type        = "list"
+  type        = list
   default     = []
 }
 
@@ -282,19 +282,19 @@ variable "dhcp_options_domain_name" {
 
 variable "dhcp_options_domain_name_servers" {
   description = "Specify a list of DNS server addresses for DHCP options set, default to AWS provided"
-  type        = "list"
+  type        = list
   default     = ["AmazonProvidedDNS"]
 }
 
 variable "dhcp_options_ntp_servers" {
   description = "Specify a list of NTP servers for DHCP options set"
-  type        = "list"
+  type        = list
   default     = []
 }
 
 variable "dhcp_options_netbios_name_servers" {
   description = "Specify a list of netbios servers for DHCP options set"
-  type        = "list"
+  type        = list
   default     = []
 }
 
